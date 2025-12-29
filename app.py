@@ -155,7 +155,7 @@ def process_pdfs(folder_path):
     return pd.DataFrame(data)
 
 # --- LOAD DATA ---
-df = process_pdfs('esg_reports')
+df = process_pdfs('.')
 
 # --- MAIN LAYOUT ---
 st.title("🌿 AI-Based Greenwashing Detection System")
@@ -244,4 +244,5 @@ if not df.empty:
         """)
 
 else:
+
     st.warning("⚠️ No data found. Please ensure the 'esg_reports' folder exists and contains PDFs.")
